@@ -1,5 +1,37 @@
 <<<<<<< HEAD
 'use strict';
+// ТЕОРИЯ
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+class ColoredRectangleWithText extends Rectangle {
+    constructor(height, width, text, bgColor) {
+        super(height, width);
+        this.text = text;
+        this.bgColor = bgColor;
+    }
+    showMyProps() {
+        console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`)
+    }
+}
+const div = new ColoredRectangleWithText(25, 10, 'hhhhhh', 'red');
+div.showMyProps();
+console.log(div.calcArea());
+const square = new Rectangle(10, 10);
+const long = new Rectangle(20, 100);
+
+console.log(square.calcArea());
+console.log(long.calcArea());
+
+=======
+<<<<<<< HEAD
+'use strict';
 // 1)   ОБЫЧНАЯ ФУНКЦИЯ: THIS = WINDOW, НО ЕСЛИ ВКЛЮЧЕН 'use strict' - undefined
 // ДАЖЕ ЕСЛИ ФУНКЦИЯ ВНУТРИ ФУНКЦИИ, ТО БУДЕТ: THIS - undefined (убираем this перед A и B, тогда консоль выводит 9)
 function showThis (a, b) {
@@ -131,3 +163,4 @@ let end = new Date();
 alert(`Цикл отработал за ${end - start} миллисекунд`)
 >>>>>>> 4f50b5e7555e95a5080aad35011825c63ee066d6
 >>>>>>> c49425e20a878ce12fccefe63b1697c195d6fff5
+>>>>>>> c0e9a72816de20e6ff6ddfe39e0f333b4e884b7e
